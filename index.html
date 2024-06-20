@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="toast hidden">
+        <div>
+          <img src="./assets/images/icon-success-check.svg" alt="toast check" />
+          <span>Message Sent!</span>
+        </div>
+        <p class="msg_description">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </section>
+      <section class="form_container">
+        <h1 class="title">Contact Us</h1>
+        <form action="/" class="form">
+          <div class="name_inputs">
+            <div class="form_control">
+              <label for="firstName"
+                >First Name <span class="star">*</span></label
+              >
+              <input type="text" name="firstName" id="firstName" />
+              <span class="error hidden">This field is required</span>
+            </div>
+            <div class="form_control">
+              <label for="lastName"
+                >Last Name <span class="star">*</span></label
+              >
+              <input type="text" name="lastName" id="lastName" />
+              <span class="error hidden">This field is required</span>
+            </div>
+          </div>
+          <div class="form_control">
+            <label for="email">Email Address <span class="star">*</span></label>
+            <input type="email" name="email" id="email" />
+            <span class="error valid hidden"
+              >Please enter a valid email address</span
+            >
+            <span class="error empty hidden">This field is required</span>
+          </div>
+          <div class="form_control radio">
+            <label for="query">Query Type <span class="star">*</span></label>
+            <div id="query">
+              <div class="query_type">
+                <input
+                  type="radio"
+                  id="option1"
+                  name="query_type"
+                  aria-required="true"
+                />
+                <label for="option1">General Enquiry</label>
+              </div>
+              <div class="query_type">
+                <input
+                  type="radio"
+                  id="option2"
+                  name="query_type"
+                  aria-required="true"
+                />
+                <label for="option2">Support Request</label>
+              </div>
+            </div>
+            <span class="error hidden">Please select a query type</span>
+          </div>
+          <div class="form_control">
+            <label for="message">Message <span class="star">*</span></label>
+            <textarea id="message" rows="4" aria-required="true"></textarea>
+            <span class="error hidden">This field is required</span>
+          </div>
+          <div class="form_control checkbox">
+            <div>
+              <input type="checkbox" id="consent" aria-required="true" />
+              <label for="consent"
+                >I consent to being contacted by the team
+                <span class="star">*</span></label
+              >
+            </div>
+            <span class="error hidden"
+              >To submit this form, please consent to being contacted</span
+            >
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <!-- <script src="main.js"></script> -->
+    <script src="index.js"></script>
+  </body>
+</html>
